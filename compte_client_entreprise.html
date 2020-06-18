@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ouverture Compte Bancaire</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="script_index.css" />
+</head>
+<body>
+	<header>
+		<h1>BIENVENUE DANS LA BANQUE DU PEUPLE</h1>
+	</header>
+
+	<h2>VEILLEZ SAISIR LES INFORMATIONS DU CLIENT</h2>
+
+	<form action="" method="post">
+			<p><i>Complétez le formulaire. Les champs marqué par </i><em>*</em> sont <em>obligatoires</em></p>
+			<div>
+				<label for="nom_entreprise">Nom Entreprise <em>*</em></label>
+				<input type="text" id="nom_entreprise" name="nom_entreprise" autofocus="" placeholder="saisir le nom de l'entreprise" onblur="verifie_nom_entreprise(this)" />
+			</div>
+			<div>
+				<label for="adresse_entreprise">Adresse Entreprise <em>*</em></label>
+				<input type="text" id="adresse_entreprise" name="nom_entreprise" placeholder="saisir l'adresse de l'entreprise" onblur="verifie_adresse_entreprise(this)" />
+			</div>
+			<div>
+				<label for="telephone">Nom Employeur </label>
+				<input type="text" id="telephone" name="telephone" placeholder="saisir le numéro telephone" onblur="verifie_telephone(this)"/>
+			</div>
+			<div>
+				<label for="email">E-mail <em>*</em></label>
+				<input type="text" id="email" name="email" placeholder="saisir l'e-mail" onblur="verifie_email(this)"/>
+			</div>			
+			
+			
+			<label class="selection_type_compte">Sélectionnez le type de compte <em>*</em></label>
+			<select id="type_compte" name="type_compte" onblur="verifie_selection(this)">
+			<option></option>
+			<option>Compte Epargne</option>
+			<option>Compte Courant</option>
+			<option>Compte Bloqué</option>
+			</select>
+			<span id="erreur_selection"></span>
+			<br/><br/>
+			
+			<div id="duree_blocage">
+				<label for="duree">Durée Blocage <em>*</em></label>
+				<input type="number" name="duree_blocage" id="temps_blocage" min="12" /><span> mois</span>
+			</div>
+
+			<div class="validation">
+				<input type="submit" value="Valider" />
+				<input type="reset" value="Annuler" />
+			</div>
+
+	</form>
+
+	<script type="text/javascript" src="script_index.js"></script>
+</body>
+</html>

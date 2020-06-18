@@ -5,23 +5,24 @@ h1
 	padding: 10px 20px 10px 20px;
 	color: white;
 	text-align: center;
-	width: 50%;
+	width: 55%;
 	height: 40px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 h2
 {
-	width: 50%;
-	margin: auto;
+	
+	text-align: center;
 	margin-top: 70px;
-	margin-bottom: 10%;
+	margin-bottom: 15px;
 	font-family: Arial, "Arial Black", "Times New Roman", Times, serif;
 }
-.type_compte
+.comptes
 {
 	width: 50%;
 	margin: auto;
+	margin-top: 10%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -50,4 +51,62 @@ a:hover
 {
 	box-shadow: 4px 4px #FFD007;
 	transform: translate(-3px, -3px); /*transistion (déplacement) de l'élément au survol souris*/
+}
+
+form 
+{
+	border-color: #504DC1;
+	border-radius: 10px;
+	border-style: solid;
+	width: 50%;
+	margin: auto;
+	padding: 3%;
+}
+label {
+  	width: 200px;
+  	display: inline-block;
+  	margin-left: 10%;
+}
+ 
+em {
+  	font-weight: bold;
+  	font-style: normal;
+  	color: #f00;
+}
+
+input {
+  	width: 249px;
+  	height: 20px;
+  	/*text-decoration: none;*/
+  	border: solid #504DC1 2px ;
+  	border-radius: 5px;
+  	margin-bottom: 7px;
+  	margin-left: 10%;
+}
+
+.validation
+{
+	margin-left: 40%;
+	margin-top: 20px;
+
+}
+.validation input
+{
+  	width: 100px;
+	
+	height: 25px;	
+}
+
+.selection_type_compte
+{
+	width: 220px;
+}
+#temps_blocage
+{
+	width: 50px;
+}
+
+#type_compte
+{
+	margin-left: 7%; 
 }
