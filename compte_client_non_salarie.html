@@ -12,33 +12,32 @@
 
 	<h2>VEILLEZ SAISIR LES INFORMATIONS DU CLIENT</h2>
 
-	<form action="" method="post">
+	<form action="index.html" method="post" onsubmit="return verifie_formulaire_non_salarie(this)">
 			<p><i>Complétez le formulaire. Les champs marqué par </i><em>*</em> sont <em>obligatoires</em></p>
 			<div>
 				<label for="nom">Nom <em>*</em></label>
-				<input type="text" id="nom" name="nom" placeholder="saisir le nom" autofocus="" onblur="verifie_nom(this)" />
+				<input type="text" id="nom" name="nom" placeholder="ex : DIOP" autofocus="" onblur="verifie_nom(this)" />
 			</div>
 			<div>
 				<label for="prenom">Prénom <em>*</em></label>
-				<input type="text" id="prenom" name="prenom" placeholder="saisir le prénom" onblur="verifie_prenom(this)" />
+				<input type="text" id="prenom" name="prenom" placeholder="ex : Mor" onblur="verifie_prenom(this)"/>
 			</div>
 			<div>
 				<label for="adresse">Adresse <em>*</em></label>
-				<input type="text" id="adresse" name="adresse" placeholder="saisir l'adresse" onblur="verifie_adresse(this)" />
+				<input type="text" id="adresse" name="adresse" placeholder="ex : Grand Yoff" onblur="verifie_adresse(this)"/>
 			</div>
 			<div>
 				<label for="telephone">Tel <em>*</em></label>
-				<input type="text" id="telephone" name="telephone" placeholder="saisir le numéro téléphone" onblur="verifie_telephone(this)"/>
+				<input type="tel" id="telephone" name="telephone" placeholder="ex : +2217xxxxxxxx " onblur="verifie_telephone(this)"/>
 			</div>
 			<div>
 				<label for="email">E-mail </label>
-				<input type="text" id="email" name="email" placeholder="saisir l'e-mail" onblur="verifie_email(this)" />
+				<input type="text" id="email" name="email" placeholder="ex : prenom.nom@simplon.co" onblur="verifie_email(this)" />
 			</div>
-			
 
 			<label class="selection_type_compte">Sélectionnez le type de compte <em>*</em></label>
-			<select id="type_compte" name="type_compte" onblur="verifie_selection(this)">
-			<option></option>
+			<select id="type_compte" name="type_compte" onblur="verifie_type_compte(this)">
+			<option selected></option>
 			<option>Compte Epargne</option>
 			<option>Compte Courant</option>
 			<option>Compte Bloqué</option>
@@ -48,11 +47,11 @@
 			
 			<div id="duree_blocage">
 				<label for="duree">Durée Blocage <em>*</em></label>
-				<input type="number" name="duree_blocage" id="temps_blocage" min="12" /><span> mois</span>
+				<input type="text" name="duree_blocage" id="temps_blocage"  /><span id="erreur_duree"> mois</span>
 			</div>
 
 			<div class="validation">
-				<input type="submit" value="Valider" />
+				<input type="submit" value="Valider" id="valider" />
 				<input type="reset" value="Annuler" />
 			</div>
 
